@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "aa9559ed-e213-4ad1-a92d-38028cc3ee74",
+		"name": "Pogoda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request gives current weather",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a93ce3e9-3522-4793-8733-3388bff75df3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.apixu.com/v1/current.json?key=c8d71d918fa4433fae4104955180206&q=Lodz",
+					"protocol": "http",
+					"host": [
+						"api",
+						"apixu",
+						"com"
+					],
+					"path": [
+						"v1",
+						"current.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c8d71d918fa4433fae4104955180206"
+						},
+						{
+							"key": "q",
+							"value": "Lodz"
+						},
+						{
+							"key": "",
+							"value": "",
+							"warning": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "ea2578ef-8594-4874-b794-ac6442c657d7",
+					"name": "Request gives current weather",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://api.apixu.com/v1/current.json?key=c8d71d918fa4433fae4104955180206&q=Lodz",
+							"protocol": "http",
+							"host": [
+								"api",
+								"apixu",
+								"com"
+							],
+							"path": [
+								"v1",
+								"current.json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "c8d71d918fa4433fae4104955180206"
+								},
+								{
+									"key": "q",
+									"value": "Lodz"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "319",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 05 Jun 2018 20:50:42 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 google",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-StackifyID",
+							"value": "V1|62ea6cc1-c64c-4f66-b80c-c8073a836085|C59032|CD18|",
+							"name": "X-StackifyID",
+							"description": "Custom header"
+						},
+						{
+							"key": "access-control-allow-headers",
+							"value": "content-type",
+							"name": "access-control-allow-headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"name": "access-control-allow-origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						}
+					],
+					"cookie": [],
+					"body": "{\"location\":{\"name\":\"Lodz\",\"region\":\"\",\"country\":\"Poland\",\"lat\":52.27,\"lon\":16.75,\"tz_id\":\"Europe/Warsaw\",\"localtime_epoch\":1528231843,\"localtime\":\"2018-06-05 22:50\"},\"current\":{\"last_updated\":\"2018-06-05 22:35\",\"temp_c\":19.3,\"temp_f\":66.7,\"is_day\":0,\"condition\":{\"text\":\"Partly cloudy\",\"icon\":\"//cdn.apixu.com/weather/64x64/night/116.png\",\"code\":1003},\"wind_mph\":13.2,\"wind_kph\":21.2,\"wind_dir\":\"NE\",\"pressure_mb\":1013.0,\"pressure_in\":30.4,\"humidity\":73,\"cloud\":7}}"
+				}
+			]
+		},
+		{
+			"name": "Request gives forecast",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f0f84a4-66e7-4716-8e0e-87ed30ba31cb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.apixu.com/v1/forecast.json?key=c8d71d918fa4433fae4104955180206&q=Lodz&days=5",
+					"protocol": "http",
+					"host": [
+						"api",
+						"apixu",
+						"com"
+					],
+					"path": [
+						"v1",
+						"forecast.json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c8d71d918fa4433fae4104955180206"
+						},
+						{
+							"key": "q",
+							"value": "Lodz"
+						},
+						{
+							"key": "days",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Prognoza pogody na pięć dni do przodu"
+			},
+			"response": []
+		}
+	]
+}
