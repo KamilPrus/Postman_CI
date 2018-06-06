@@ -11,10 +11,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a93ce3e9-3522-4793-8733-3388bff75df3",
+						"id": "db32be32-539d-41e0-887b-18771565e4f4",
 						"type": "text/javascript",
 						"exec": [
-							""
+							"pm.test(\"Check if city is Lodz\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.location.name).to.eql(\"Lo\");",
+							"});"
 						]
 					}
 				}
@@ -27,7 +30,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://api.apixu.com/v1/current.json?key=c8d71d918fa4433fae4104955180206&q=Lodz",
+					"raw": "http://api.apixu.com/v1/current.json?key={{key}}&q=Lodz",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -41,7 +44,7 @@
 					"query": [
 						{
 							"key": "key",
-							"value": "c8d71d918fa4433fae4104955180206"
+							"value": "{{key}}"
 						},
 						{
 							"key": "q",
@@ -58,7 +61,7 @@
 			},
 			"response": [
 				{
-					"id": "ea2578ef-8594-4874-b794-ac6442c657d7",
+					"id": "45e12c3e-5ed7-413d-b696-17113c627aca",
 					"name": "Request gives current weather",
 					"originalRequest": {
 						"method": "GET",
@@ -169,23 +172,23 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4f0f84a4-66e7-4716-8e0e-87ed30ba31cb",
+						"id": "2389975b-d752-4f13-8e25-2076b787ec50",
 						"type": "text/javascript",
 						"exec": [
-							""
+							"pm.test(\"Check if forecast is for 5 dat=ys\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.forecast.forecastday.length).to.eql(5);",
+							"});"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "GET",
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://api.apixu.com/v1/forecast.json?key=c8d71d918fa4433fae4104955180206&q=Lodz&days=5",
+					"raw": "http://api.apixu.com/v1/forecast.json?key={{key}}&q=Lodz&days=5",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -199,7 +202,7 @@
 					"query": [
 						{
 							"key": "key",
-							"value": "c8d71d918fa4433fae4104955180206"
+							"value": "{{key}}"
 						},
 						{
 							"key": "q",
